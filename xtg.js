@@ -1,4 +1,4 @@
-const $ = new Env('xtg');
+const $ = new Env('xt');
 const activeEndTime = '2020/11/13 00:00:00';
 const notify = $.isNode() ? require('./sendNotify') : '';
 
