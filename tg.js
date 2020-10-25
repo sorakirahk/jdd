@@ -1,4 +1,4 @@
-const $ = new Env('xt');
+const $ = new Env('tg');
 const activeEndTime = '2020/11/13 00:00:00';
 const notify = $.isNode() ? require('./sendNotify') : '';
 
@@ -55,7 +55,7 @@ const shareID = [
 const JD_API_HOST = 'https://urvsaggpt.m.jd.com/guardianstar';
 !(async () => {
   if (!cookiesArr[0]) {
-    $.msg($.name, '【提示】请先获取京东账号一cookie', 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
+    $.msg($.name, 'login to your jd accont一cookie', 'https://bean.m.jd.com/', {"open-url": "https://bean.m.jd.com/"});
     return;
   }
   for (let i = 0; i < cookiesArr.length; i++) {
@@ -64,8 +64,8 @@ const JD_API_HOST = 'https://urvsaggpt.m.jd.com/guardianstar';
       $.UserName = decodeURIComponent(cookie.match(/pt_pin=(.+?);/) && cookie.match(/pt_pin=(.+?);/)[1])
       $.index = i + 1;
       $.beanCount = 0;
-      console.log(`\n开始【京东账号${$.index}】${$.UserName}\n`);
-      console.log(`一共${starID.length}个${$.name}任务，耗时很久，PC测试耗时：100秒`)
+      console.log(`\n【jd accont${$.index}】${$.UserName}\n`);
+      console.log(`共${starID.length}个${$.name}任务，耗时很久，PC测试耗时：100秒`)
       await TotalBean();
       for (let index = 0; index < starID.length; index ++) {
         $.activeId = starID[index];
