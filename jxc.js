@@ -1,4 +1,4 @@
-const $ = new Env('jxc');
+const $ = new Env('jx');
 
 let cookiesArr = [], cookie = '', jdSuperMarketShareArr = [], notify, newShareCodes;
 
